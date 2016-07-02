@@ -19,13 +19,15 @@ export class MyApp {
             // Here you can do any higher level native things you might need.
             StatusBar.styleDefault();
         });
+
+        BarcodeScanner.scan().then((barcodeData) => {
+            console.log(barcodeData);
+        }, (err) => {
+            console.log(err);
+        });
+
     }
 }
 
 ionicBootstrap(MyApp)
 
-BarcodeScanner.scan().then((barcodeData) => {
-    console.log(barcodeData);
-}, (err) => {
-    console.log(err);
-});
