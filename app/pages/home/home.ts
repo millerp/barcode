@@ -7,7 +7,7 @@ import {BarcodeScanner} from 'ionic-native';
 })
 export class HomePage {
 
-  code: string;
+  code = '123';
 
   constructor(private navController: NavController) {
   
@@ -18,6 +18,7 @@ export class HomePage {
       this.code = barcodeData.text;
     }, (err) => {
       console.log('erro');
+      this.code = 'erro';
     });
 
   }
