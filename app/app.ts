@@ -20,12 +20,15 @@ export class MyApp {
             StatusBar.styleDefault();
         });
 
+
+    }
+
+    barcodeopen() {
         BarcodeScanner.scan().then((barcodeData) => {
             console.log(barcodeData);
         }, (err) => {
             console.log(err);
         });
-
     }
 }
 
