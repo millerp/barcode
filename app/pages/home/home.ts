@@ -12,7 +12,7 @@ export class HomePage {
 
   barcodeopen() {
     BarcodeScanner.scan().then((barcodeData) => {
-      console.log('data');
+      console.log(barcodeData);
     }, (err) => {
       console.log('erro');
     });
