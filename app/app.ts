@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import {Platform, ionicBootstrap} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {TabsPage} from './pages/tabs/tabs';
-import {BarcodeScanner} from 'ionic-native';
 
 @Component({
     template: '<ion-nav [root]="rootPage"></ion-nav>'
@@ -20,15 +19,6 @@ export class MyApp {
             StatusBar.styleDefault();
         });
 
-
-    }
-
-    barcodeopen() {
-        BarcodeScanner.scan().then((barcodeData) => {
-            console.log(barcodeData);
-        }, (err) => {
-            console.log(err);
-        });
     }
 }
 
