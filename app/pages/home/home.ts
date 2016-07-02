@@ -6,13 +6,16 @@ import {BarcodeScanner} from 'ionic-native';
   templateUrl: 'build/pages/home/home.html'
 })
 export class HomePage {
+
+  code: string;
+
   constructor(private navController: NavController) {
   
   }
 
   barcodeopen() {
     BarcodeScanner.scan().then((barcodeData) => {
-      console.log(barcodeData);
+      this.code = barcodeData.text;
     }, (err) => {
       console.log('erro');
     });
