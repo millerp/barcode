@@ -1,17 +1,28 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title></ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding class="home">
     <ion-list>
-
         <ion-item>
             <ion-label>Código de Barras</ion-label>
             <ion-input type="text" value="{{code}}"></ion-input>
         </ion-item>
     </ion-list>
-
     <button (click)="barcodeopen()" block>Scan</button>
+    <br/>
+    <button (click)="vibrar()" block>Vibrar 1</button>
+    <button (click)="vibrarr()" block>Vibrar 2</button>
+    <button (click)="pararv()" block>Parar</button>
+    <br/>
+    <button (click)="printS()" block>PrintScreen</button>
+    <br/>
+    <button (click)="ligarFlash()" block>Flash</button>
+    <br/>
+    <button (click)="share()" block>Compartilhar</button>
+    <br/>
+    <ion-list>
+        <ion-item *ngFor="let post of posts">
+            {{post.title}}
+        </ion-item>
+        <ion-item *ngFor="let client of customers">
+            {{client.first_name}} {{client.last_name}} - {{client.email}}
+        </ion-item>
+    </ion-list>
 </ion-content>
